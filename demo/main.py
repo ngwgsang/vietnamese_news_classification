@@ -45,8 +45,7 @@ def predict_label_from_news(news):
 @app.post('/predict')
 def disable_cat(request: Request, news: str = Form(...)):
     label = predict_label_from_news(news)
-    return templates.TemplateResponse("index.html", {"request": request, "label": label})
-
+    return templates.TemplateResponse("predict.html", {"request": request, "label": label})
 
 
 
@@ -56,4 +55,5 @@ def main(request: Request):
 
 
 
-    
+# Để chạy host dùng lệnh
+# uvicorn main:app 
