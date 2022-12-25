@@ -26,7 +26,7 @@
           .top{
             background: #282A3A;
             width: 100%;
-            height: 20rem;
+            height: 16rem;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -45,7 +45,8 @@
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            padding: 10rem;
+            padding: 4rem;
+            position: relative;
           }
 
           .mid form{
@@ -77,7 +78,13 @@
           
 
 
-
+          #submit{
+            background: #4B56D2;
+            color: #fff;
+            outline: none;
+            border: none;
+            cursor: pointer;
+          }
           
           .bottom{
             background: #282A3A;
@@ -114,7 +121,17 @@
             border: 0.3rem solid #fff;
           }
 
-
+          .model-info{
+            position: absolute;
+            left: 10rem;
+            top: 4rem;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            background: #eee;
+            border-radius: 0.6rem;
+          }
       </style>
   </head>
    <body>
@@ -123,6 +140,10 @@
         </div>
         
         <div class="mid">
+          <div class="model-info">
+              <span>Thông tin:</span>
+              <span>DEMO sử dụng mô hình SVM với độ chính xác 91.36%</span>
+          </div>
           <h2>Nhập vào nội dung văn bản</h2><br>
           <form method="post" action="/predict">
             <textarea type="text" id="news" name="news"></textarea>
