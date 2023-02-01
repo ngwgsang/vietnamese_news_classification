@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+      <style>
+
+
+          *{
+            font-family: 'Poppins', sans-serif;
+            font-size: 62.5%;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+          }
+
+          body{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+          }
+
+          .top{
+            background: #282A3A;
+            width: 100%;
+            height: 16rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+
+          .top .title{
+            font-size: 5rem;
+            text-align: center;
+            color: #fff;
+          }
+
+          .mid{
+            width: 100%;
+            height: 60rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            padding: 4rem;
+            position: relative;
+          }
+
+          .mid form{
+            font-size: 4rem;
+            padding: 2rem;
+            border-radius: 0.6rem;
+            width: 90rem;
+            display: flex;
+            gap: 1rem;
+          }
+
+          h2{
+            font-size: 2.6rem;
+          }
+          
+
+          #submit{
+            /* width: 20rem; */
+            width: 25%;
+            height: 30rem;
+          }
+
+          #news{
+            /* width: 60rem; */
+            width: 70%;
+            height: 30rem;
+            text-align: start;
+          }
+          
+
+
+          #submit{
+            background: #4B56D2;
+            color: #fff;
+            outline: none;
+            border: none;
+            cursor: pointer;
+          }
+          
+          .bottom{
+            background: #282A3A;
+            width: 100%;
+            height: 20rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 4rem 20rem;
+            gap: 20rem;
+          }
+          
+          ul{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+          }
+
+          ul li{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+          }
+
+          ul li span{
+            font-size: 2rem;
+            color: #fff;
+          }
+
+
+          ul li img{
+            border-radius: 20rem;
+            width: 4rem;
+            border: 0.3rem solid #fff;
+          }
+
+          .model-info{
+            position: absolute;
+            left: 10rem;
+            top: 4rem;
+            font-size: 2rem;
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            background: #eee;
+            border-radius: 0.6rem;
+          }
+      </style>
+  </head>
+   <body>
+        <div class="top">
+          <h1 class="title">🎉 PHÂN LOẠI VĂN BẢN TIN TỨC TIẾNG VIỆT 🎉</h1>
+        </div>
+        
+        <div class="mid">
+          <div class="model-info">
+              <span>Thông tin:</span>
+              <span>DEMO sử dụng mô hình SVM với độ chính xác 91.36%</span>
+          </div>
+          <h2>Nhập vào nội dung văn bản</h2><br>
+          <form method="post" action="/predict">
+            <textarea type="text" id="news" name="news"></textarea>
+            <input class="submit" id = "submit" type="submit" value="Dự đoán"
+                 hx-get="/index"
+                 hx-target="#root"
+                 hx-swap="beforeend">
+          </form>        
+
+        </div>
+      </div>
+
+      <div class="bottom">
+          <ul>
+            <li><img src="https://avatars.githubusercontent.com/u/55171560?v=4"><span>Nguyễn Quang Sang - 19522122</span></li>
+            <li><img src="https://avatars.githubusercontent.com/u/87044511?v=4"><span>Nguyễn Viết Sơn - 19522140</span></li>
+            <li><img src="https://avatars.githubusercontent.com/u/62144353?v=4"><span>Tô Minh Quân - 19522087</span></li>
+          </ul>
+
+          <ul>
+            <li><span>DS102.N11.CNCL</span></li>
+            <li><span>HỌC MÁY THỐNG KÊ</span></li>
+          </ul>
+      </div>
+   </body>
+</html>
